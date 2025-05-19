@@ -69,7 +69,7 @@ tasks.shadowJar {
 bukkit {
     name = rootProject.name
     version = rootProject.version as String
-    main = "io.github.subkek.lavaplayerCdLib"
+    main = "io.github.subkek.lavaplayer.CdLib"
 
     authors = listOf(
         "subkek",

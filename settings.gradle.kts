@@ -1,1 +1,1 @@
-rootProject.name = "cd-lib"
+rootProject.name = "CdLib"
