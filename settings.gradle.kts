@@ -1,1 +1,1 @@
-rootProject.name = "CdLib"
+rootProject.name = "lavaplayer-lib"
