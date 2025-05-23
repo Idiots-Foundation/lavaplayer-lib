@@ -1,8 +1,15 @@
 plugins {
-    `java-library`
+    id("java-library")
+    id("maven-publish")
     id("com.gradleup.shadow") version "9.0.0-beta13"
     id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
 }
+
+val mavenGroup: String by rootProject
+val packageVersion: String by rootProject
+
+group = mavenGroup
+version = packageVersion
 
 repositories {
     mavenCentral()
@@ -72,4 +79,20 @@ tasks.shadowJar {
     relocate("org.jetbrains")
     relocate("com.sedmelluq")
     relocate("dev.jorel.commandapi")
+}
+
+publishing {
+  publications {
+    register(project.name, MavenPublication::class) {
+      artifact(tasks.shadowJar.get())
+    }
+  }
+
+  repositories {
+    maven {
+      name = "subkek"
+      url = uri("https://repo.subkek.space/maven-public/")
+      credentials(PasswordCredentials::class)
+    }
+  }
 }
