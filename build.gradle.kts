@@ -1,6 +1,6 @@
 plugins {
     `java-library`
-    id("io.github.goooler.shadow") version "8.1.8"
+    id("com.gradleup.shadow") version "9.0.0-beta13"
     id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
 }
 
