@@ -1,3 +1,5 @@
+import net.minecrell.pluginyml.bukkit.BukkitPluginDescription.Permission.Default as PermDefault
+
 plugins {
     id("java-library")
     id("maven-publish")
@@ -29,6 +31,18 @@ dependencies {
     }
 
     compileOnly("org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT")
+}
+
+bukkit {
+    name = rootProject.name
+    version = rootProject.version as String
+    main = "io.github.subkek.lavaplayer.CdLib"
+
+    authors = listOf("subkek", "yiski")
+    website = "https://discord.gg/eRvwvmEXWz"
+    apiVersion = "1.16"
+
+    foliaSupported = true
 }
 
 java {
