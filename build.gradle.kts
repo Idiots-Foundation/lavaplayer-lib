@@ -60,7 +60,8 @@ tasks.build {
 }
 
 tasks.shadowJar {
-    archiveFileName = "${rootProject.name}-$version.jar"
+    archiveBaseName.set("lavaplayer-lib")
+    archiveClassifier.set("")
 
     configurations = listOf(project.configurations.shadow.get())
     mergeServiceFiles()
