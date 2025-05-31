@@ -66,6 +66,14 @@ tasks.shadowJar {
     configurations = listOf(project.configurations.shadow.get())
     mergeServiceFiles()
 
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    exclude("META-INF/LICENSE")
+    exclude("META-INF/LICENSE.txt")
+    exclude("META-INF/NOTICE")
+    exclude("META-INF/NOTICE.txt")
+    exclude("META-INF/DEPENDENCIES")
+
     fun relocate(pkg: String) = relocate(pkg, "io.github.subkek.lavaplayer.libs.$pkg") {
         exclude("com/sedmelluq/discord/lavaplayer/natives/**")
     }
