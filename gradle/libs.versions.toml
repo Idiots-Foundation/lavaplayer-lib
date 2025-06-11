@@ -1,6 +1,6 @@
 [versions]
-lavaplayer = "2.2.2"
-lavaplayer-youtube-source = "641e49b2c6ab03c2ab63f732a36aa3a531fe7170-SNAPSHOT"
+lavaplayer = "2.2.3"
+lavaplayer-youtube-source = "2f7a4d4bcb7fac0ff21c6fe19469ced558df33ad-SNAPSHOT"
 
 [libraries]
 lavaplayer = { module = "dev.arbjerg:lavaplayer", version.ref = "lavaplayer" }
