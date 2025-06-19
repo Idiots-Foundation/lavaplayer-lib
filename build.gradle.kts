@@ -43,6 +43,10 @@ bukkit {
     apiVersion = "1.16"
 
     foliaSupported = true
+
+    loadBefore = listOf(
+        "CustomDiscs"
+    )
 }
 
 java {
